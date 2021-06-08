@@ -1,14 +1,14 @@
 const express = require('express');
 const router = express.Router();
 
-//Retorno as messagem do mural
+//Retorno as mensagem do mural
 router.get('/', (req, res, next) =>{
     res.status(200).send({
         mensagem: 'Usando o GET dentro da rota do mural de mensagens'
     });
 });
 
-//Insere um mensagem
+//Insere uma mensagem
 router.post('/', (req, res, next) =>{
     res.status(201).send({
         mensagem: 'Usando o POST dentro da rota do mural de mensagens'
@@ -31,14 +31,14 @@ router.get('/:id_mural', (req, res, next) =>{
     }    
 });
 
-//Altera uma mendagem
+//Altera uma mensagem
 router.patch('/',(req, res, next) =>{
     res.status(201).send({
         mensagem: "Usando o PATCH dentro da rota do mural de mensagens"
     });
 });
 
-//Exclui uma mendagem
+//Exclui uma mensagem
 router.delete('/',(req, res, next) =>{
     res.status(201).send({
         mensagem: "Usando o DELETE dentro da rota do mural de mensagens"
