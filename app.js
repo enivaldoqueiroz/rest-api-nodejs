@@ -1,10 +1,8 @@
 const express = require('express');
 const app = express();
 
-app.use((req, res, next) => {
-    res.status(200).send({
-        mensagem: 'OK, Deu certo'
-    });
-});
+const rotaMural = require('./routes/mural');
+
+app.use('/mural', rotaMural);
 
 module.exports = app;
